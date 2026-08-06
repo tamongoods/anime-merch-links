@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>多聞くん今どっち!?グッズ情報局 | リンク集</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+Antique:wght@400;500;700;900&family=Mochiy+Pop+One&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg: #FFF8F9;
+    --surface: #FCEEF0;
+    --surface-2: #F8E1E6;
+    --gold: #d15d86;
+    --gold-bright: #ad4367;
+    --gold-dim: #E8A6BC;
+    --text: #4A2530;
+    --text-muted: #9C6E7C;
+    --line: rgba(212,106,140,0.35);
+    --line-soft: rgba(212,106,140,0.18);
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    background:
+      radial-gradient(circle at 15% 0%, rgba(212,106,140,0.07), transparent 45%),
+      radial-gradient(circle at 85% 100%, rgba(212,106,140,0.06), transparent 40%),
+      var(--bg);
+    color:var(--text);
+    font-family:'Zen Kaku Gothic Antique', sans-serif;
+    padding:56px 20px 80px;
+    line-height:1.8;
+  }
+  .wrap{max-width:720px;margin:0 auto;}
+
+  .title-block{
+    text-align:center;
+    margin-bottom:0;
+  }
+  .title-main{
+    font-family:'Mochiy Pop One', sans-serif;
+    font-weight:400;
+    font-size:clamp(30px, 7vw, 44px);
+    color:var(--gold);
+    -webkit-text-stroke:6px #FFFFFF;
+    paint-order:stroke fill;
+    letter-spacing:0.04em;
+    line-height:1.3;
+  }
+  .title-sub{
+    font-family:'Mochiy Pop One', sans-serif;
+    font-weight:400;
+    font-size:clamp(26px, 5.5vw, 36px);
+    color:var(--gold);
+    -webkit-text-stroke:5px #FFFFFF;
+    paint-order:stroke fill;
+    letter-spacing:0.06em;
+    margin-top:-8px;
+  }
+  .subtitle{
+    text-align:center;
+    font-size:15px;
+    color:var(--text-muted);
+    margin-bottom:12px;
+  }
+
+  .ornament{
+    text-align:center;
+    letter-spacing:14px;
+    font-size:15px;
+    margin:0 auto 44px;
+    max-width:420px;
+  }
+
+  .section{margin-bottom:58px;}
+  .ticket{
+    display:flex;
+    align-items:stretch;
+    max-width:140px;
+    margin-bottom:28px;
+    border:1px dashed var(--line);
+    border-radius:2px;
+    background:var(--surface);
+    box-shadow:0 6px 14px rgba(212,106,140,0.12), inset 0 1px 0 rgba(255,255,255,.5);
+  }
+  .ticket-main{
+    flex:1;
+    padding:9px 12px;
+    display:flex;
+    flex-direction:column;
+    gap:1px;
+  }
+  .ticket-eyebrow{
+    font-size:6px;
+    letter-spacing:0.25em;
+    color:var(--text-muted);
+    text-transform:uppercase;
+  }
+  .ticket-title{
+    font-family:'Zen Kaku Gothic Antique', sans-serif;
+    font-weight:700;
+    font-size:19px;
+    color:var(--gold-bright);
+    letter-spacing:0.08em;
+  }
+  .ticket-divider{
+    position:relative;
+    border-left:1px dashed var(--line);
+    margin:4px 0;
+  }
+  .ticket-divider::before,
+  .ticket-divider::after{
+    content:"";
+    position:absolute;
+    left:50%;
+    width:8px;
+    height:8px;
+    background:var(--bg);
+    border-radius:50%;
+  }
+  .ticket-divider::before{top:0;transform:translate(-50%,-50%);}
+  .ticket-divider::after{bottom:0;transform:translate(-50%,50%);}
+  .ticket-stub{
+    width:30px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:5px 0;
+    writing-mode:vertical-rl;
+    font-size:6px;
+    letter-spacing:0.15em;
+    color:var(--text-muted);
+    text-transform:uppercase;
+  }
+
+  .shop-list{
+    display:flex;
+    flex-direction:column;
+    border-top:1px solid var(--line);
+  }
+  .shop{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:16px;
+    padding:30px 16px;
+    border-bottom:1px solid var(--line);
+    transition:background .2s ease, transform .2s ease, box-shadow .2s ease;
+  }
+  .shop:hover{background:#fff3f6;transform:translateY(-3px);box-shadow:0 10px 22px rgba(212,106,140,.16);} .shop:focus-within{background:#fff3f6;box-shadow:0 0 0 3px rgba(185,78,113,.22),0 10px 22px rgba(212,106,140,.16);}
+
+  .shop-left{display:flex;align-items:baseline;gap:18px;}
+  .shop-index{
+    font-size:15px;
+    display:inline-block;
+    min-width:20px;
+    transition:transform 0.35s cubic-bezier(.34,1.56,.64,1);
+  }
+  .shop:hover .shop-index{
+    transform:rotate(-18deg) scale(1.25) translateY(-3px);
+  }
+  .shop-name{
+    font-size:17px;
+    font-weight:500;
+    color:var(--text);
+    letter-spacing:0.02em;
+  }
+
+  .shop-link{
+    flex-shrink:0;
+    font-size:12.5px;
+    color:var(--gold-bright);
+    text-decoration:none;
+    border:1px solid var(--gold-dim);
+    padding:10px 18px;
+    border-radius:6px;
+    letter-spacing:0.05em;
+    transition:background-color .22s ease,color .22s ease,border-color .22s ease,transform .22s ease,box-shadow .22s ease;
+    white-space:nowrap;
+  }
+  .shop-link:hover{
+    background:var(--gold);
+    color:#100D08;
+    border-color:var(--gold);
+  }
+
+  @media (max-width:480px){
+    .shop{flex-direction:column;align-items:flex-start;gap:10px;}
+    .shop-link{align-self:stretch;width:100%;text-align:center;padding:14px 16px;}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="title-block">
+    <div class="title-main">多聞くん今どっち!?</div>
+    <div class="title-sub">グッズ情報局</div>
+  </div>
+  <div class="subtitle">主要販売店リンク集</div>
+
+  <div class="ornament">💚 💙 ❤️ 💛 💜</div>
+
+  <div class="section">
+    <div class="ticket">
+      <div class="ticket-main">
+        <span class="ticket-eyebrow">Shop Ticket</span>
+        <span class="ticket-title">定価販売</span>
+      </div>
+      <div class="ticket-divider"></div>
+      <div class="ticket-stub">FIXED PRICE</div>
+    </div>
+    <div class="shop-list">
+      <div class="shop">
+        <div class="shop-left"><span class="shop-index">🍄</span><span class="shop-name">アニメイト</span></div>
+        <a class="shop-link" href="https://www.animate-onlineshop.jp/products/list.php?sci=0&smt=%E5%A4%9A%E8%81%9E%E3%81%8F%E3%82%93%E4%BB%8A%E3%81%A9%E3%81%A3%E3%81%A1%EF%BC%81%EF%BC%9F&ss=5&sl=40&nf=1&spc=1&scc=&ssy=&ssm=&sey=&sem=" target="_blank" rel="noopener">商品一覧を見る ↗</a>
+      </div>
+      <div class="shop">
+        <div class="shop-left"><span class="shop-index">🍄</span><span class="shop-name">コレイズ</span></div>
+        <a class="shop-link" href="https://colleize.com/lineup/1016?sortType=NEW&type=NORMAL&type=RESERVATION&type=BACKORDER&pno=1" target="_blank" rel="noopener">商品一覧を見る ↗</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="ticket">
+      <div class="ticket-main">
+        <span class="ticket-eyebrow">Shop Ticket</span>
+        <span class="ticket-title">割引販売</span>
+      </div>
+      <div class="ticket-divider"></div>
+      <div class="ticket-stub">DISCOUNT</div>
+    </div>
+    <div class="shop-list">
+      <div class="shop">
+        <div class="shop-left"><span class="shop-index">🍄</span><span class="shop-name">あみあみ</span></div>
+        <a class="shop-link" href="https://slist.amiami.jp/top/search/list?s_keywords=%E5%A4%9A%E8%81%9E%E3%81%8F%E3%82%93%E4%BB%8A%E3%81%A9%E3%81%A3%E3%81%A1%EF%BC%81%EF%BC%9F&s_sortkey=regtimed&pagemax=60&getcnt=0&pagecnt=1" target="_blank" rel="noopener">商品一覧を見る ↗</a>
+      </div>
+      <div class="shop">
+        <div class="shop-left"><span class="shop-index">🍄</span><span class="shop-name">Neowing</span></div>
+        <a class="shop-link" href="https://www.neowing.co.jp/series/6738?term.shop=&order=new&page=1" target="_blank" rel="noopener">商品一覧を見る ↗</a>
+      </div>
+      <div class="shop">
+        <div class="shop-left"><span class="shop-index">🍄</span><span class="shop-name">ホビーサーチ</span></div>
+        <a class="shop-link" href="https://www.1999.co.jp/search?typ1_c=100&cat=&state=&sold=0&searchkey=%E5%A4%9A%E8%81%9E%E3%81%8F%E3%82%93%E4%BB%8A%E3%81%A9%E3%81%A3%E3%81%A1!%3F&spage=1&sortid=0" target="_blank" rel="noopener">商品一覧を見る ↗</a>
+      </div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
